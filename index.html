@@ -1,30 +1,36 @@
+index.html
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Srija — Marine & Robotics Tech Portfolio</title>
+  <title>Srija Karthikeyan — Engineering & Multidisciplinary Tech</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@500;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['Space Grotesk', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
           colors: {
-            abyss: '#090e1a',
-            surface: '#0e1320',
-            card: '#161b28',
-            cardHover: '#1d2333',
-            cyanAccent: '#00e5ff',
+            brand: {
+              emerald: '#10b981',
+              cyan: '#00e5ff',
+              surface: '#0a0e17',
+              card: '#111726',
+              cardHover: '#161f33',
+              border: 'rgba(255, 255, 255, 0.08)',
+              borderActive: 'rgba(0, 229, 255, 0.3)'
+            }
+          },
+          fontFamily: {
+            syne: ['Syne', 'sans-serif'],
+            grotesk: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
           }
         }
       }
@@ -32,406 +38,550 @@
   </script>
   <style>
     body {
-      background-color: #090e1a;
+      background-color: #070a11;
       color: #e2e8f0;
-      font-family: 'Inter', sans-serif;
+      font-family: 'Space Grotesk', sans-serif;
     }
-    .font-display { font-family: 'Space Grotesk', sans-serif; }
-    .font-mono { font-family: 'JetBrains Mono', monospace; }
-    .bento-card {
-      background: #111726;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      transition: border-color 0.25s ease, transform 0.25s ease;
+    .grid-bg {
+      background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
     }
-    .bento-card:hover {
-      border-color: rgba(0, 229, 255, 0.35);
+    .glow-cyan {
+      box-shadow: 0 0 25px -5px rgba(0, 229, 255, 0.25);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.2);
     }
   </style>
 </head>
-<body class="min-h-screen antialiased selection:bg-cyanAccent selection:text-abyss pb-20 md:pb-0">
+<body class="grid-bg min-h-screen selection:bg-brand-cyan/20 selection:text-brand-cyan antialiased pb-20 md:pb-12">
 
-  <!-- Desktop & Mobile Top Navigation -->
-  <header class="sticky top-0 z-40 backdrop-blur-md bg-[#090e1a]/85 border-b border-white/10">
+  <!-- Desktop Navigation -->
+  <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-brand-surface/85 border-b border-brand-border">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2.5 font-display font-bold tracking-wider text-white text-lg">
-        <span class="w-8 h-8 rounded-lg bg-cyanAccent/10 border border-cyanAccent/30 flex items-center justify-center text-cyanAccent">
-          <span class="material-symbols-outlined text-[18px]">waves</span>
-        </span>
-        SRIJA
-      </a>
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-mono font-bold text-xs">
+          SK
+        </div>
+        <div>
+          <span class="font-bold text-sm tracking-wide text-white block">SRIJA KARTHIKEYAN</span>
+          <span class="text-[10px] text-slate-400 tracking-wider font-mono">CS &amp; Multidisciplinary Eng.</span>
+        </div>
+      </div>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-7 text-xs font-mono uppercase tracking-widest text-slate-400">
-        <a href="#home" class="hover:text-cyanAccent transition-colors">Home</a>
-        <a href="#about" class="hover:text-cyanAccent transition-colors">About</a>
-        <a href="#projects" class="hover:text-cyanAccent transition-colors">Projects</a>
-        <a href="#skills" class="hover:text-cyanAccent transition-colors">Skills</a>
-        <a href="#contact" class="hover:text-cyanAccent transition-colors">Contact</a>
+      <nav class="hidden md:flex items-center gap-6 text-xs font-mono text-slate-300">
+        <a href="#about" class="hover:text-brand-cyan transition-colors">ABOUT</a>
+        <a href="#pillars" class="hover:text-brand-cyan transition-colors">CORE PILLARS</a>
+        <a href="#projects" class="hover:text-brand-cyan transition-colors">PROJECTS</a>
+        <a href="#skills" class="hover:text-brand-cyan transition-colors">STACK MATRIX</a>
+        <a href="#contact" class="hover:text-brand-cyan transition-colors">CONTACT</a>
       </nav>
 
-      <!-- Status Pill & GitHub -->
-      <div class="flex items-center gap-3">
-        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-slate-300">
-          <span class="w-2 h-2 rounded-full bg-cyanAccent animate-pulse"></span>
-          <span class="hidden sm:inline">2nd Yr CSE ·</span> Open to Internships
-        </span>
-        <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-           class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-cyanAccent hover:border-cyanAccent/40 transition-colors">
+      <div class="hidden sm:flex items-center gap-3">
+        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[11px] font-mono">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          2nd Yr CSE • Open to Internships
+        </div>
+        <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors border border-white/10">
           <span class="material-symbols-outlined text-[18px]">code</span>
         </a>
       </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-14 space-y-14 md:space-y-20">
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 pt-10 space-y-24">
 
-    <!-- HERO SECTION -->
-    <section id="home" class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-      <div class="lg:col-span-7 space-y-5">
-        <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 rounded-full bg-cyanAccent/10 border border-cyanAccent/25 text-cyanAccent font-mono text-[11px] uppercase tracking-wider">
-            ● 2nd Year CSE · Jerusalem College of Engineering
+    <!-- Hero Section -->
+    <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-2.5 py-1 rounded-md bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono">
+            ● COMPUTER SCIENCE ENGINEERING UNDERGRADUATE
           </span>
-          <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 font-mono text-[11px] uppercase tracking-wider">
-            Exploring Marine &amp; Robotics Tech
+          <span class="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-slate-300 text-xs font-mono">
+            JCE CHENNAI
           </span>
         </div>
 
-        <h1 class="font-display text-5xl sm:text-6xl font-bold tracking-tight text-white">
-          Srija
-        </h1>
+        <div class="space-y-2">
+          <p class="text-xs font-mono text-brand-cyan tracking-wider uppercase font-semibold">
+            Exploring Intelligent Systems, Embedded Tech &amp; Multidisciplinary Engineering
+          </p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-syne font-extrabold text-white leading-tight">
+            Srija <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-emerald">Karthikeyan</span>
+          </h1>
+        </div>
 
-        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl">
-          Building intelligent systems at the intersection of
-          <span class="text-white font-medium">AI</span>,
-          <span class="text-white font-medium">Web</span>,
-          <span class="text-cyanAccent font-medium">Marine Data</span> &amp;
-          <span class="text-white font-medium">Robotics</span>.
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl">
+          Designing intelligent software, data models, and interactive hardware systems. Passionate about applying AI and systems engineering to solve real-world problems—with specialized interests in autonomous robotics and marine telemetry.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-3 pt-2">
-          <a href="#projects" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-cyanAccent text-abyss font-semibold text-sm hover:brightness-110 transition">
-            Explore Projects
-            <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <a href="#projects" class="px-5 py-2.5 rounded-lg bg-brand-emerald hover:bg-emerald-400 text-slate-950 font-semibold text-xs font-mono flex items-center gap-2 transition-all glow-emerald">
+            <span>Explore Projects</span>
+            <span class="material-symbols-outlined text-sm">arrow_downward</span>
           </a>
-          <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white/5 border border-white/15 text-white font-medium text-sm hover:border-cyanAccent/50 transition">
-            <span class="material-symbols-outlined text-[18px]">terminal</span>
-            GitHub Profile
+          <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg bg-brand-card hover:bg-brand-cardHover border border-brand-border text-slate-200 text-xs font-mono flex items-center gap-2 transition-colors">
+            <span class="material-symbols-outlined text-sm">terminal</span>
+            <span>GitHub Profile</span>
           </a>
+          <a href="#contact" class="px-4 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 text-xs font-mono flex items-center gap-2 transition-colors">
+            <span class="material-symbols-outlined text-sm">mail</span>
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-6 pt-4 text-xs font-mono text-slate-400 border-t border-brand-border/60">
+          <div><span class="text-emerald-400 font-semibold">●</span> 2nd Yr B.E. CSE</div>
+          <div><span class="text-brand-cyan font-semibold">●</span> Active Builds &amp; Repos</div>
+          <div><span class="text-blue-400 font-semibold">●</span> Multidisciplinary Focus</div>
         </div>
       </div>
 
-      <!-- SYS.TELEMETRY CARD -->
+      <!-- Telemetry Box -->
       <div class="lg:col-span-5">
-        <div class="bento-card rounded-xl p-5 space-y-4">
-          <div class="flex items-center justify-between border-b border-white/10 pb-3">
-            <div class="flex items-center gap-2 font-mono text-xs text-slate-400">
-              <span class="material-symbols-outlined text-cyanAccent text-[16px]">sensors</span>
-              SYS.TELEMETRY // 09.17° N, 79.13° E
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border relative overflow-hidden glow-cyan">
+          <div class="absolute -right-16 -top-16 w-48 h-48 bg-brand-cyan/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="flex items-center justify-between pb-4 border-b border-brand-border font-mono text-xs">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+              <span class="ml-2 text-slate-400">srija@multidisciplinary-sys</span>
             </div>
-            <span class="text-[11px] font-mono text-cyanAccent flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyanAccent"></span> ONLINE
-            </span>
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] border border-emerald-500/20">READY</span>
           </div>
 
-          <div class="space-y-3 text-sm">
-            <div class="flex justify-between gap-4 border-b border-white/5 pb-2">
-              <span class="font-mono text-xs text-slate-500 uppercase">Focus</span>
-              <span class="text-slate-200 text-right font-medium">Marine &amp; Robotics Tech</span>
+          <div class="space-y-4 pt-5 font-mono text-xs">
+            <div class="flex items-center justify-between p-3 rounded-lg bg-black/30 border border-white/5">
+              <span class="text-slate-400 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-blue-400">computer</span> DOMAIN
+              </span>
+              <span class="text-slate-200 font-semibold">Computer Science &amp; Systems</span>
             </div>
-            <div class="flex justify-between gap-4 border-b border-white/5 pb-2">
-              <span class="font-mono text-xs text-slate-500 uppercase">Current Build</span>
-              <span class="text-slate-200 text-right font-medium">BlueWatch (Gulf of Mannar)</span>
+
+            <div class="flex items-center justify-between p-3 rounded-lg bg-black/30 border border-white/5">
+              <span class="text-slate-400 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-cyan-400">psychology</span> INTELLIGENCE
+              </span>
+              <span class="text-brand-cyan font-semibold">Machine Learning &amp; Analytics</span>
             </div>
-            <div class="flex justify-between gap-4 border-b border-white/5 pb-2">
-              <span class="font-mono text-xs text-slate-500 uppercase">Stack</span>
-              <span class="text-slate-200 text-right font-mono text-xs">Python · Three.js · ESP32</span>
+
+            <div class="flex items-center justify-between p-3 rounded-lg bg-black/30 border border-white/5">
+              <span class="text-slate-400 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-emerald-400">memory</span> EMBEDDED TECH
+              </span>
+              <span class="text-emerald-400 font-semibold">ESP32, Circuits &amp; Sensors</span>
             </div>
-            <div class="flex justify-between gap-4">
-              <span class="font-mono text-xs text-slate-500 uppercase">Status</span>
-              <span class="text-cyanAccent text-right font-medium">Open to Internships</span>
+
+            <div class="flex items-center justify-between p-3 rounded-lg bg-black/30 border border-white/5">
+              <span class="text-slate-400 flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-indigo-400">explore</span> RESEARCH FOCUS
+              </span>
+              <span class="text-indigo-300 font-semibold">Marine Telemetry &amp; Robotics</span>
             </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-brand-border/60 flex items-center justify-between text-[11px] font-mono text-slate-400">
+            <span>$ cat objective.txt</span>
+            <span class="text-slate-200 font-semibold">Engineering for Real-World Impact</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 01 // PROFILE & TELEMETRY -->
-    <section id="about" class="space-y-5">
-      <div class="flex items-center justify-between font-mono text-xs uppercase tracking-widest text-slate-400">
-        <span>01 // Profile &amp; Telemetry</span>
-        <span>JCE · Chennai</span>
+    <!-- Core Pillars -->
+    <section id="pillars" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-brand-border pb-4">
+        <div>
+          <span class="text-xs font-mono text-brand-cyan uppercase">01 // Engineering Foundations</span>
+          <h2 class="text-2xl sm:text-3xl font-syne font-bold text-white mt-1">Multidisciplinary Engineering Mindset</h2>
+        </div>
+        <p class="text-xs font-mono text-slate-400">Jerusalem College of Engineering • Chennai</p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
-        <div class="lg:col-span-8 bento-card rounded-xl p-6 space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-cyanAccent/10 border border-cyanAccent/25 flex items-center justify-center text-cyanAccent">
-              <span class="material-symbols-outlined">terminal</span>
-            </div>
-            <div>
-              <h2 class="font-display text-xl font-bold text-white">Engineering &amp; Curiosity</h2>
-              <p class="font-mono text-[11px] uppercase tracking-wider text-slate-400">Undergraduate Researcher</p>
-            </div>
+      <!-- Mindset Highlight Banner -->
+      <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+        <div class="flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 shrink-0">
+            <span class="material-symbols-outlined">developer_board</span>
           </div>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            I'm a second-year Computer Science Engineering student at Jerusalem College of Engineering who loves building things for the web and exploring AI. I enjoy turning ideas into working projects, from smart study tools to circuit simulators and marine thermal analysis, and I'm always learning something new.
-          </p>
-          <div class="flex flex-wrap gap-2 pt-1">
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">AI &amp; ML</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">Web Systems</span>
-            <span class="px-2.5 py-1 rounded bg-cyanAccent/10 border border-cyanAccent/25 font-mono text-xs text-cyanAccent">Marine Data</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">Embedded Simulation</span>
+          <div class="space-y-2">
+            <h3 class="text-base sm:text-lg font-semibold text-white">Bridging Software Logic with Real-World Physical Systems</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              I am a second-year Computer Science Engineering student focused on building reliable end-to-end solutions. Rather than confining myself to a single vertical, I bridge <strong class="text-white font-medium">scalable software architecture</strong>, <strong class="text-brand-cyan font-medium">applied machine learning</strong>, and <strong class="text-brand-emerald font-medium">interactive embedded electronics</strong>. From architecting study productivity systems to simulating microcontroller circuits and analyzing thermal oceanic shifts, my goal is to convert engineering theory into robust deployed tools.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 rounded bg-white/5 text-slate-300 text-xs font-mono">Core CS &amp; Algorithms</span>
+              <span class="px-2.5 py-1 rounded bg-white/5 text-slate-300 text-xs font-mono">Predictive ML &amp; NLP</span>
+              <span class="px-2.5 py-1 rounded bg-white/5 text-slate-300 text-xs font-mono">Microcontrollers &amp; IoT</span>
+              <span class="px-2.5 py-1 rounded bg-white/5 text-slate-300 text-xs font-mono">Environmental Data Systems</span>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="lg:col-span-4 grid grid-cols-3 lg:grid-cols-1 gap-4">
-          <div class="bento-card rounded-xl p-4 flex flex-col lg:flex-row lg:items-center justify-between">
-            <div>
-              <div class="font-display text-2xl sm:text-3xl font-bold text-cyanAccent">5+</div>
-              <div class="font-mono text-[11px] uppercase text-slate-400">Repositories</div>
-            </div>
-            <span class="hidden lg:inline material-symbols-outlined text-slate-600">deployed_code</span>
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Pillar 1 -->
+        <div class="p-5 rounded-xl bg-brand-card/70 border border-brand-border hover:border-blue-500/40 transition-all space-y-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
+            <span class="material-symbols-outlined text-[20px]">terminal</span>
           </div>
-          <div class="bento-card rounded-xl p-4 flex flex-col lg:flex-row lg:items-center justify-between">
-            <div>
-              <div class="font-display text-2xl sm:text-3xl font-bold text-white">2nd Yr</div>
-              <div class="font-mono text-[11px] uppercase text-slate-400">CSE @ JCE</div>
-            </div>
-            <span class="hidden lg:inline material-symbols-outlined text-slate-600">school</span>
+          <h4 class="font-semibold text-white text-sm">Software &amp; Systems</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Core CS fundamentals, Data Structures &amp; Algorithms, structured Python architecture, CLI automation, and modern web application logic.</p>
+          <div class="pt-2 text-[11px] font-mono text-blue-400">Python • C/C++ • Modular Code</div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-5 rounded-xl bg-brand-card/70 border border-brand-border hover:border-cyan-500/40 transition-all space-y-3">
+          <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-brand-cyan">
+            <span class="material-symbols-outlined text-[20px]">hub</span>
           </div>
-          <div class="bento-card rounded-xl p-4 flex flex-col lg:flex-row lg:items-center justify-between">
-            <div>
-              <div class="font-display text-lg sm:text-xl font-bold text-white">Marine</div>
-              <div class="font-mono text-[11px] uppercase text-cyanAccent">Tech Focus</div>
-            </div>
-            <span class="hidden lg:inline material-symbols-outlined text-slate-600">waves</span>
+          <h4 class="font-semibold text-white text-sm">AI &amp; Data Science</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Practical Machine Learning, intelligent study assistants, LLM integration with Groq API, and predictive analytical dashboards with Streamlit.</p>
+          <div class="pt-2 text-[11px] font-mono text-cyan-400">Streamlit • Groq LLMs • Analytics</div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-5 rounded-xl bg-brand-card/70 border border-brand-border hover:border-emerald-500/40 transition-all space-y-3">
+          <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
           </div>
+          <h4 class="font-semibold text-white text-sm">Embedded &amp; Robotics</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">ESP32 microcontroller ecosystems, virtual circuit wiring simulations, sensor-actuator interfacing, and foundations of autonomous robotics.</p>
+          <div class="pt-2 text-[11px] font-mono text-emerald-400">ESP32 • Virtual Hardware • Sensors</div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="p-5 rounded-xl bg-brand-card/70 border border-brand-border hover:border-indigo-500/40 transition-all space-y-3">
+          <div class="w-9 h-9 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+            <span class="material-symbols-outlined text-[20px]">public</span>
+          </div>
+          <h4 class="font-semibold text-white text-sm">Applied Domain Research</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Applying computing power to physical environmental science: sea surface temperature anomalies, thermal coral stress, and sustainability metrics.</p>
+          <div class="pt-2 text-[11px] font-mono text-indigo-400">Marine Telemetry • SST Stress Modeling</div>
         </div>
       </div>
     </section>
 
-    <!-- 02 // DEPLOYED SYSTEMS -->
-    <section id="projects" class="space-y-5">
-      <div class="flex items-center justify-between font-mono text-xs uppercase tracking-widest text-slate-400">
-        <span>02 // Deployed Systems</span>
-        <span>Selected Work</span>
-      </div>
-
-      <!-- Featured Project: BlueWatch -->
-      <div class="bento-card rounded-xl p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-        <div class="lg:col-span-7 space-y-4">
-          <div class="flex flex-wrap items-center gap-2.5">
-            <span class="px-2.5 py-0.5 rounded bg-cyanAccent/15 text-cyanAccent font-mono text-[11px] uppercase">● In Progress</span>
-            <span class="font-mono text-[11px] uppercase text-slate-400">Marine Tech · Gulf of Mannar</span>
-          </div>
-          <h3 class="font-display text-2xl sm:text-3xl font-bold text-white">BlueWatch</h3>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Coral-reef thermal stress analysis for the Gulf of Mannar, studying sea-surface temperature against the 2010 and 2016 bleaching events.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">PYTHON</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">STREAMLIT</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">DATA ANALYSIS</span>
-          </div>
+    <!-- Projects Section -->
+    <section id="projects" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-brand-border pb-4">
+        <div>
+          <span class="text-xs font-mono text-brand-cyan uppercase">02 // Selected Engineering Works</span>
+          <h2 class="text-2xl sm:text-3xl font-syne font-bold text-white mt-1">Featured Projects Across Domains</h2>
         </div>
-
-        <!-- SST Anomaly Chart -->
-        <div class="lg:col-span-5 bg-[#090e1a] border border-white/10 rounded-lg p-4 space-y-3">
-          <div class="flex justify-between items-center font-mono text-[11px]">
-            <span class="text-slate-400">SST ANOMALY // BLEACHING THRESHOLD</span>
-            <span class="text-rose-400 font-semibold">+1.8°C PEAK</span>
-          </div>
-          <svg viewBox="0 0 300 90" class="w-full h-24 overflow-visible">
-            <line x1="0" y1="35" x2="300" y2="35" stroke="rgba(255,255,255,0.12)" stroke-dasharray="4 4" />
-            <path d="M 10 70 Q 50 65, 85 45 T 160 55 T 235 30 T 290 60" fill="none" stroke="#00e5ff" stroke-width="2.5" stroke-linecap="round" />
-            <circle cx="85" cy="45" r="3.5" fill="#facc15" />
-            <circle cx="235" cy="30" r="4" fill="#fb7185" />
-          </svg>
-          <div class="flex justify-between font-mono text-[10px] text-slate-400">
-            <span>BASELINE: 28.5°C</span>
-            <span class="text-cyanAccent">LIVE MODELING ACTIVE</span>
-          </div>
+        <div class="flex items-center gap-2 font-mono text-xs">
+          <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300">5 Deployed Repositories</span>
+          <span class="px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">Active Engineering</span>
         </div>
       </div>
 
-      <!-- Other Projects Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <!-- Featured Project 1: BlueWatch -->
+      <div class="p-6 sm:p-8 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-borderActive transition-all">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-4">
+            <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+              <span class="px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/30">APPLIED DATA &amp; ENVIRONMENTAL RESEARCH</span>
+              <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">In Active Development</span>
+            </div>
+
+            <h3 class="text-2xl sm:text-3xl font-syne font-bold text-white">BlueWatch</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Sea surface temperature (SST) &amp; coral-reef thermal stress analysis platform focused on the Gulf of Mannar marine ecosystem. Integrates historical SST dataset benchmarks against catastrophic bleaching occurrences (2010 &amp; 2016) to model acute thermal anomaly thresholds and risk zones.
+            </p>
+
+            <div class="flex flex-wrap gap-2 pt-1 font-mono text-xs">
+              <span class="px-2.5 py-1 rounded bg-black/40 border border-white/10 text-slate-300">Python</span>
+              <span class="px-2.5 py-1 rounded bg-black/40 border border-white/10 text-slate-300">Streamlit</span>
+              <span class="px-2.5 py-1 rounded bg-black/40 border border-white/10 text-slate-300">Data Analysis &amp; Modeling</span>
+              <span class="px-2.5 py-1 rounded bg-black/40 border border-white/10 text-slate-300">Gulf of Mannar Dataset</span>
+            </div>
+
+            <div class="pt-2">
+              <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-mono font-medium text-brand-cyan hover:text-cyan-300 transition-colors">
+                <span>Explore Research Architecture</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- BlueWatch Chart Graphic -->
+          <div class="lg:col-span-5">
+            <div class="p-5 rounded-xl bg-black/40 border border-white/5 space-y-3 font-mono">
+              <div class="flex items-center justify-between text-[11px] text-slate-400 pb-2 border-b border-white/5">
+                <span>SST ANOMALY / THERMAL STRESS</span>
+                <span class="text-amber-400 font-semibold">+1.8°C PEAK</span>
+              </div>
+              <svg viewBox="0 0 320 100" class="w-full h-24 overflow-visible">
+                <defs>
+                  <linearGradient id="sstGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#00e5ff" stop-opacity="0.0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M 10 70 Q 70 85 130 55 T 250 25 T 310 60 L 310 95 L 10 95 Z" fill="url(#sstGrad)"/>
+                <path d="M 10 70 Q 70 85 130 55 T 250 25 T 310 60" fill="none" stroke="#00e5ff" stroke-width="2.5"/>
+                <line x1="10" y1="50" x2="310" y2="50" stroke="rgba(255,255,255,0.15)" stroke-dasharray="3 3"/>
+                <circle cx="250" cy="25" r="4" fill="#fbbf24"/>
+                <circle cx="130" cy="55" r="3.5" fill="#00e5ff"/>
+              </svg>
+              <div class="flex items-center justify-between text-[10px] text-slate-400 pt-1">
+                <span>2010 Stress Baseline</span>
+                <span class="text-cyan-400">2016 Anomaly</span>
+                <span class="text-emerald-400">Predictive Model</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Grid Projects -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
         <!-- Circuit Builder -->
-        <div class="bento-card rounded-xl p-5 flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-borderActive transition-all space-y-4 flex flex-col justify-between">
           <div class="space-y-3">
-            <div class="flex justify-between items-center">
-              <span class="px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono text-[11px] uppercase">Completed</span>
-              <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-slate-400 hover:text-cyanAccent">View on GitHub →</a>
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">EMBEDDED &amp; HARDWARE SYSTEMS</span>
+              <span class="material-symbols-outlined text-emerald-400 text-sm">memory</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white">Circuit Builder</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">
-              Hardware-Software Project Builder: a virtual workspace to plan, wire, check, and simulate student ESP32 projects with interactive links.
+            <h3 class="text-xl font-syne font-bold text-white">Circuit Builder</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Hardware-Software Project Builder: an interactive virtual workspace tailored for engineering students to architect, pin-wire, validate logic, and simulate ESP32 projects before physical breadboard deployment.
             </p>
           </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">WEB</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">SIMULATION</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">ESP32</span>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex flex-wrap gap-2 font-mono text-[11px]">
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">ESP32</span>
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">Interactive Web Simulation</span>
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">Electronics</span>
+            </div>
+            <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400 hover:text-emerald-300 transition-colors">
+              <span>View Circuit Builder on GitHub</span>
+              <span class="material-symbols-outlined text-sm">open_in_new</span>
+            </a>
           </div>
         </div>
 
         <!-- Smart Study Assistant -->
-        <div class="bento-card rounded-xl p-5 flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-borderActive transition-all space-y-4 flex flex-col justify-between">
           <div class="space-y-3">
-            <div class="flex justify-between items-center">
-              <span class="px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono text-[11px] uppercase">Completed</span>
-              <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-slate-400 hover:text-cyanAccent">View on GitHub →</a>
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">AI &amp; APPLICATION ENGINEERING</span>
+              <span class="material-symbols-outlined text-indigo-400 text-sm">psychology</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white">Smart Study Assistant</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">
-              AI-powered placement and interview prep assistant for students with aptitude, technical practice, mock interviews, progress dashboard, and gamification.
+            <h3 class="text-xl font-syne font-bold text-white">Smart Study Assistant</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              AI-driven placement and campus interview readiness assistant. Integrates low-latency Groq LLM inference, technical practice tracks, mock diagnostic interviews, progress tracking, and adaptive gamification.
             </p>
           </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">PYTHON</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">STREAMLIT</span>
-            <span class="px-2.5 py-1 rounded bg-cyanAccent/10 border border-cyanAccent/25 font-mono text-xs text-cyanAccent">GROQ</span>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex flex-wrap gap-2 font-mono text-[11px]">
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">Python</span>
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">Streamlit</span>
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">Groq API</span>
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">NLP</span>
+            </div>
+            <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-indigo-400 hover:text-indigo-300 transition-colors">
+              <span>View Smart Study Assistant on GitHub</span>
+              <span class="material-symbols-outlined text-sm">open_in_new</span>
+            </a>
           </div>
         </div>
 
         <!-- ReVal -->
-        <div class="bento-card rounded-xl p-5 flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-borderActive transition-all space-y-4 flex flex-col justify-between">
           <div class="space-y-3">
-            <div class="flex justify-between items-center">
-              <span class="px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono text-[11px] uppercase">Completed</span>
-              <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-slate-400 hover:text-cyanAccent">View on GitHub →</a>
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="px-2 py-0.5 rounded bg-cyan-500/10 text-brand-cyan border border-cyan-500/30">APPLIED CIRCULAR ECONOMY / ML</span>
+              <span class="material-symbols-outlined text-brand-cyan text-sm">recycling</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white">ReVal</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">
-              AI Waste to Wealth Advisor — an intelligent system converting waste streams into valuable circular economy resources and actionable byproducts.
+            <h3 class="text-xl font-syne font-bold text-white">ReVal</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              AI Waste to Wealth Advisor: an intelligent recommendation engine converting industrial and municipal waste streams into profitable, sustainable circular economy resources and actionable byproducts.
             </p>
           </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">AI / ML</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">SUSTAINABILITY</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">PYTHON</span>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex flex-wrap gap-2 font-mono text-[11px]">
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">AI / ML</span>
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">Circular Systems</span>
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">Python</span>
+            </div>
+            <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-brand-cyan hover:text-cyan-300 transition-colors">
+              <span>View ReVal on GitHub</span>
+              <span class="material-symbols-outlined text-sm">open_in_new</span>
+            </a>
           </div>
         </div>
 
         <!-- Electricity Bill Estimator -->
-        <div class="bento-card rounded-xl p-5 flex flex-col justify-between space-y-4">
+        <div class="p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-borderActive transition-all space-y-4 flex flex-col justify-between">
           <div class="space-y-3">
-            <div class="flex justify-between items-center">
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono text-[11px] uppercase">Completed</span>
-                <span class="px-2 py-0.5 rounded bg-white/5 text-slate-400 font-mono text-[10px] uppercase">CLI Utility</span>
-              </div>
-              <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-slate-400 hover:text-cyanAccent">View on GitHub →</a>
+            <div class="flex items-center justify-between font-mono text-xs">
+              <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30">UTILITY &amp; SOFTWARE ARCHITECTURE</span>
+              <span class="material-symbols-outlined text-amber-300 text-sm">bolt</span>
             </div>
-            <h3 class="font-display text-xl font-bold text-white">Electricity Bill Estimator</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">
-              Python CLI application to accurately calculate, predict, and optimize monthly residential and commercial electricity consumption and tariffs.
+            <h3 class="text-xl font-syne font-bold text-white">Electricity Bill Estimator</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Algorithmic utility calculation and tariff estimation CLI tool. Computes stepped slab rates, projects recurring seasonal power expenditures, and recommends electrical load optimizations for residential &amp; commercial users.
             </p>
           </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">PYTHON</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">CLI</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">UTILITY</span>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex flex-wrap gap-2 font-mono text-[11px]">
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">Python CLI</span>
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">Algorithmic Modeling</span>
+              <span class="px-2.5 py-1 rounded bg-black/30 border border-white/5 text-slate-300">Tariff Logic</span>
+            </div>
+            <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-amber-300 hover:text-amber-200 transition-colors">
+              <span>View Estimator on GitHub</span>
+              <span class="material-symbols-outlined text-sm">open_in_new</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Technical Matrix -->
+    <section id="skills" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-brand-border pb-4">
+        <div>
+          <span class="text-xs font-mono text-brand-cyan uppercase">03 // Capabilities &amp; Stack</span>
+          <h2 class="text-2xl sm:text-3xl font-syne font-bold text-white mt-1">Comprehensive Technical Matrix</h2>
+        </div>
+        <p class="text-xs font-mono text-slate-400">Balanced across CS, Data, Hardware &amp; Interfaces</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Programming & Core CS -->
+        <div class="p-5 rounded-xl bg-brand-card border border-brand-border space-y-3">
+          <div class="flex items-center gap-2 text-xs font-mono text-blue-400 font-semibold">
+            <span class="material-symbols-outlined text-sm">code</span>
+            <span>Programming &amp; Core CS</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Python</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">C / C++</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Java / DSA Basics</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Git &amp; GitHub</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Linux Environment</span>
+          </div>
+        </div>
+
+        <!-- AI & Data -->
+        <div class="p-5 rounded-xl bg-brand-card border border-brand-border space-y-3">
+          <div class="flex items-center gap-2 text-xs font-mono text-brand-cyan font-semibold">
+            <span class="material-symbols-outlined text-sm">query_stats</span>
+            <span>AI &amp; Data</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Streamlit</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Data Analysis</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Machine Learning</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Groq API</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Predictive Analytics</span>
+          </div>
+        </div>
+
+        <!-- Hardware & Robotics -->
+        <div class="p-5 rounded-xl bg-brand-card border border-brand-border space-y-3">
+          <div class="flex items-center gap-2 text-xs font-mono text-emerald-400 font-semibold">
+            <span class="material-symbols-outlined text-sm">developer_board</span>
+            <span>Hardware &amp; Robotics</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">ESP32 Simulation</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Sensors &amp; Actuators</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Microcontroller Logic</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Robotics Fundamentals</span>
+          </div>
+        </div>
+
+        <!-- Web & Interactive -->
+        <div class="p-5 rounded-xl bg-brand-card border border-brand-border space-y-3">
+          <div class="flex items-center gap-2 text-xs font-mono text-indigo-400 font-semibold">
+            <span class="material-symbols-outlined text-sm">devices</span>
+            <span>Web &amp; Interactive</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 text-xs font-mono">
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">JavaScript</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">HTML5 &amp; CSS3</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Tailwind CSS</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Three.js Basics</span>
+            <span class="px-2 py-1 rounded bg-white/5 text-slate-200">Interactive Canvas</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 03 // TECHNICAL MATRIX -->
-    <section id="skills" class="space-y-5">
-      <div class="flex items-center justify-between font-mono text-xs uppercase tracking-widest text-slate-400">
-        <span>03 // Technical Matrix</span>
-        <span>Core Capabilities</span>
-      </div>
+    <!-- Connect / Contact Callout -->
+    <section id="contact" class="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-brand-card to-brand-surface border border-brand-border relative overflow-hidden">
+      <div class="max-w-2xl space-y-5">
+        <span class="text-xs font-mono text-brand-cyan tracking-wider uppercase">04 // Open to Collaboration</span>
+        <h2 class="text-3xl sm:text-4xl font-syne font-bold text-white">Let's engineer solutions together.</h2>
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+          Seeking summer internship opportunities, software engineering fellowships, and applied research collaborations spanning Intelligent Systems, Embedded Tech, and Computer Science.
+        </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <div class="bento-card rounded-xl p-5 space-y-3">
-          <div class="flex items-center gap-2 text-cyanAccent font-display font-bold text-lg">
-            <span class="material-symbols-outlined">code</span>
-            <span class="text-white">Web &amp; 3D</span>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">HTML</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">CSS</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">JavaScript</span>
-            <span class="px-2.5 py-1 rounded bg-cyanAccent/10 border border-cyanAccent/25 font-mono text-xs text-cyanAccent">Three.js</span>
-          </div>
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <!-- Update with your preferred email! -->
+          <a href="mailto:srijasarala25@gmail.com" class="px-6 py-3 rounded-xl bg-brand-cyan hover:bg-cyan-300 text-slate-950 font-semibold text-xs font-mono flex items-center gap-2 transition-all glow-cyan">
+            <span class="material-symbols-outlined text-base">mail</span>
+            <span>Email Me</span>
+          </a>
+          <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold text-xs font-mono flex items-center gap-2 transition-colors">
+            <span class="material-symbols-outlined text-base">code</span>
+            <span>GitHub</span>
+          </a>
         </div>
-
-        <div class="bento-card rounded-xl p-5 space-y-3">
-          <div class="flex items-center gap-2 text-cyanAccent font-display font-bold text-lg">
-            <span class="material-symbols-outlined">psychology</span>
-            <span class="text-white">AI &amp; Data</span>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">Python</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">Streamlit</span>
-            <span class="px-2.5 py-1 rounded bg-cyanAccent/10 border border-cyanAccent/25 font-mono text-xs text-cyanAccent">AI / ML</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">Data Analysis</span>
-          </div>
-        </div>
-
-        <div class="bento-card rounded-xl p-5 space-y-3">
-          <div class="flex items-center gap-2 text-cyanAccent font-display font-bold text-lg">
-            <span class="material-symbols-outlined">memory</span>
-            <span class="text-white">Hardware &amp; Tools</span>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">ESP32 Simulation</span>
-            <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10 font-mono text-xs text-slate-300">Git &amp; GitHub</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 04 // INITIATE UPLINK -->
-    <section id="contact" class="bento-card rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-      <div class="space-y-2">
-        <div class="font-mono text-xs uppercase tracking-widest text-cyanAccent">● 04 // Initiate Uplink</div>
-        <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Let’s build something impactful.</h2>
-        <p class="text-slate-300 text-sm sm:text-base">Open to internships and collaborations in Marine Tech, Robotics, and AI.</p>
-      </div>
-      <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-        <a href="mailto:srijasarala25@gmail.com" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-cyanAccent text-abyss font-semibold text-sm hover:brightness-110 transition">
-          <span class="material-symbols-outlined text-[18px]">mail</span>
-          Email Me
-        </a>
-        <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white/5 border border-white/15 text-white font-medium text-sm hover:border-cyanAccent/50 transition">
-          <span class="material-symbols-outlined text-[18px]">terminal</span>
-          GitHub
-        </a>
       </div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-white/10 py-6 text-center font-mono text-xs text-slate-500">
-    <p>© 2026 Srija · Jerusalem College of Engineering</p>
+  <footer class="mt-24 border-t border-brand-border/60 py-8 text-xs font-mono text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>© 2026 Srija Karthikeyan • Chennai, India</div>
+      <div class="flex items-center gap-6">
+        <a href="#about" class="hover:text-slate-300 transition-colors">Back to Top ↑</a>
+        <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">GitHub</a>
+        <a href="mailto:srijasarala25@gmail.com" class="hover:text-slate-300 transition-colors">Email</a>
+      </div>
+    </div>
   </footer>
 
-  <!-- Mobile Sticky Bottom Navigation -->
-  <nav class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-[#090e1a]/95 backdrop-blur-md border-t border-white/10 flex justify-around py-2.5 text-[11px] font-mono text-slate-400">
-    <a href="#home" class="flex flex-col items-center gap-0.5 text-cyanAccent">
-      <span class="material-symbols-outlined text-[20px]">grid_view</span>
-      Bento
+  <!-- Mobile Bottom Quick Bar -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-brand-surface/95 backdrop-blur-md border-t border-brand-border flex items-center justify-around py-3 px-2 text-[10px] font-mono text-slate-400">
+    <a href="#about" class="flex flex-col items-center gap-1 hover:text-brand-cyan">
+      <span class="material-symbols-outlined text-[18px]">person</span>
+      <span>About</span>
     </a>
-    <a href="#projects" class="flex flex-col items-center gap-0.5 hover:text-cyanAccent">
-      <span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
-      Projects
+    <a href="#pillars" class="flex flex-col items-center gap-1 hover:text-brand-cyan">
+      <span class="material-symbols-outlined text-[18px]">hub</span>
+      <span>Pillars</span>
     </a>
-    <a href="#skills" class="flex flex-col items-center gap-0.5 hover:text-cyanAccent">
-      <span class="material-symbols-outlined text-[20px]">radar</span>
-      Skills
+    <a href="#projects" class="flex flex-col items-center gap-1 hover:text-brand-cyan">
+      <span class="material-symbols-outlined text-[18px]">folder</span>
+      <span>Projects</span>
     </a>
-    <a href="#contact" class="flex flex-col items-center gap-0.5 hover:text-cyanAccent">
-      <span class="material-symbols-outlined text-[20px]">terminal</span>
-      Connect
+    <a href="#skills" class="flex flex-col items-center gap-1 hover:text-brand-cyan">
+      <span class="material-symbols-outlined text-[18px]">tune</span>
+      <span>Matrix</span>
     </a>
-  </nav>
+    <a href="#contact" class="flex flex-col items-center gap-1 hover:text-brand-cyan">
+      <span class="material-symbols-outlined text-[18px]">mail</span>
+      <span>Connect</span>
+    </a>
+  </div>
 
 </body>
 </html>
