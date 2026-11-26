@@ -3,112 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Srija Karthikeyan — Engineering & Systems Portfolio</title>
+  <title>Srija Karthikeyan — Aspiring AI Engineer &amp; Robotics Portfolio</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts: Epilogue & JetBrains Mono -->
+  <!-- Fonts: Outfit (Display), Plus Jakarta Sans (Body), JetBrains Mono (Tech/Data), Playfair Display (Italics) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Phosphor Icons -->
+  <!-- Phosphor Icons CDN -->
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+  <!-- Tailwind Configuration matching Architectural Botanical Theme -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Epilogue', 'sans-serif'],
-            display: ['Epilogue', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
           colors: {
-            alabaster: '#FAF9F5',
-            sandCard: '#FFFFFF',
-            sageDark: '#2E4A3E',
-            sageMuted: '#436858',
-            sageLight: '#E8EFEA',
-            terra: '#C86D51',
-            stoneBorder: '#E6E4DD',
-            charcoal: '#1A211E',
-            mutedText: '#6B7570',
+            alabaster: '#faf9f5',
+            stoneBorder: '#e6e4dc',
+            charcoal: '#191b1a',
+            sageDark: '#2e4a3e',
+            sageMuted: '#4a6b5d',
+            sageLight: '#e8ede9',
+            terra: '#b85d3b',
+            mutedText: '#686d69'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
           }
         }
       }
     }
   </script>
+
   <style>
     body {
-      background-color: #FAF9F5;
-      color: #1A211E;
-      font-family: 'Epilogue', sans-serif;
-    }
-    ::selection {
-      background-color: #2E4A3E;
-      color: #FAF9F5;
+      background-color: #faf9f5;
+      color: #191b1a;
+      background-image: radial-gradient(rgba(46, 74, 62, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
     }
   </style>
 </head>
-<body class="min-h-screen antialiased selection:bg-sageDark selection:text-alabaster pb-16">
 
-  <!-- Top Navigation -->
+<body class="min-h-screen antialiased flex flex-col justify-between selection:bg-sageDark selection:text-alabaster font-sans">
+
+  <!-- Top Navigation Header -->
   <header class="sticky top-0 z-50 bg-alabaster/90 backdrop-blur-md border-b border-stoneBorder">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <span class="w-2 h-2 rounded-full bg-sageDark animate-pulse"></span>
-        <a href="#" class="font-bold text-xs uppercase tracking-widest text-charcoal hover:text-sageDark transition-colors">
-          Srija Karthikeyan
-        </a>
-        <span class="text-[10px] font-mono uppercase bg-sageLight text-sageDark px-2 py-0.5 rounded font-medium">Researcher</span>
-      </div>
-      
-      <nav class="hidden md:flex items-center gap-8 text-xs font-mono tracking-wider uppercase text-mutedText">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <span class="w-2.5 h-2.5 rounded-full bg-sageDark group-hover:scale-125 transition-transform"></span>
+        <span class="font-display font-semibold tracking-wider text-xs uppercase text-charcoal">SRIJA KARTHIKEYAN</span>
+        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sageLight text-sageDark border border-sageDark/10">AI &amp; ROBOTICS</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-wider text-mutedText">
+        <a href="#about" class="hover:text-sageDark transition-colors">About</a>
         <a href="#architectures" class="hover:text-sageDark transition-colors">Architectures</a>
         <a href="#benchmarks" class="hover:text-sageDark transition-colors">Benchmarks</a>
+        <a href="#stack" class="hover:text-sageDark transition-colors">Stack</a>
         <a href="#contact" class="hover:text-sageDark transition-colors">Contact</a>
       </nav>
 
       <div class="flex items-center gap-3">
         <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono text-mutedText hover:text-charcoal transition-colors">
-          <i class="ph ph-github-logo text-sm"></i> / GitHub
+          <i class="ph ph-github-logo text-sm"></i>
+          <span>/ GITHUB</span>
         </a>
-        <a href="#contact" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-sageDark text-alabaster text-xs font-mono tracking-wide hover:bg-sageMuted transition-all shadow-sm">
-          <span>Curriculum Vitae</span>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-sageDark text-alabaster text-xs font-mono uppercase tracking-wider hover:bg-sageMuted transition-all shadow-sm">
+          <span>CONNECT</span>
           <i class="ph ph-arrow-up-right text-xs"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-6 pt-12 md:pt-20 space-y-24 md:space-y-32">
+  <!-- Main Content Container -->
+  <main class="max-w-6xl mx-auto px-6 py-12 md:py-20 w-full space-y-28">
 
     <!-- Hero Section -->
-    <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+    <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
       
-      <!-- Left Narrative -->
+      <!-- Left Column: Story, Achievements & Headline -->
       <div class="lg:col-span-7 space-y-6">
-        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-sageLight/70 border border-sageDark/10 text-sageDark text-[11px] font-mono">
-          <span class="w-1.5 h-1.5 rounded-full bg-sageDark"></span>
-          <span>ACTIVE TELEMETRY // Open to Systems & AI Research</span>
+        <div class="inline-flex flex-wrap items-center gap-2 px-3 py-1 rounded-full bg-sageLight border border-sageDark/15 text-sageDark text-[11px] font-mono">
+          <span class="w-1.5 h-1.5 rounded-full bg-sageDark animate-pulse"></span>
+          <span>B.E. CSE // CLASS OF 2029 • Jerusalem College of Engineering • 9.22 CGPA</span>
         </div>
 
         <p class="text-[11px] font-mono tracking-widest text-terra uppercase">
           Portfolio Index // 2025 Edition
         </p>
 
-        <h1 class="text-4xl md:text-6xl font-medium tracking-tight text-charcoal leading-[1.12]">
-          Engineering at the <br>
-          <span class="italic font-normal text-sageDark">intersection</span> of intelligence <span class="text-mutedText">&</span> hardware systems.
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-medium tracking-tight text-charcoal leading-[1.15]">
+          Aspiring <span class="font-serif italic font-normal text-sageDark">AI Engineer</span> building intelligent software <span class="font-serif italic font-normal text-mutedText">&amp;</span> hands-on hardware to solve real-world problems.
         </h1>
 
-        <p class="text-sm md:text-base text-mutedText leading-relaxed max-w-xl">
-          Srija Karthikeyan is an engineer and researcher based in Chennai, currently in her 2nd year of Computer Science & Engineering at Jerusalem College of Engineering. Focused on deterministic edge telemetry, local vector embeddings, and real-time microcontroller simulation.
+        <p class="text-sm md:text-base text-stone-700 leading-relaxed max-w-xl">
+          Hi, I'm Srija! I am an aspiring AI Engineer graduating in 2029 with a <strong>9.22 CGPA</strong> (and <strong>90% in school</strong>). Consistent, curious, and passionate about building intelligent software and hands-on hardware to solve real-world problems with special interests in autonomous robotics and marine technology.
         </p>
 
-        <!-- CTA Action Buttons -->
+        <!-- CTA Buttons -->
         <div class="pt-2 flex flex-wrap items-center gap-3">
           <a href="#architectures" class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-sageDark text-alabaster text-xs font-mono uppercase tracking-wider hover:bg-sageMuted transition-all shadow-sm">
             <span>Explore Systems</span>
@@ -120,55 +121,60 @@
           </a>
         </div>
 
-        <!-- Metrics Row -->
-        <div class="pt-6 grid grid-cols-3 gap-6 border-t border-stoneBorder max-w-lg">
+        <!-- Metric Numbers Highlight -->
+        <div class="pt-6 grid grid-cols-4 gap-4 border-t border-stoneBorder max-w-lg">
           <div>
-            <div class="text-2xl md:text-3xl font-bold text-charcoal font-display">4<span class="text-terra text-lg">+</span></div>
-            <p class="text-[10px] font-mono uppercase tracking-wider text-mutedText mt-0.5">Core Architectures</p>
+            <div class="text-2xl md:text-3xl font-bold text-charcoal font-display">9.22<span class="text-terra text-base">★</span></div>
+            <p class="text-[10px] font-mono uppercase tracking-wider text-mutedText mt-0.5">CGPA // JCE</p>
           </div>
           <div>
-            <div class="text-2xl md:text-3xl font-bold text-charcoal font-display">&lt;45<span class="text-xs font-mono font-normal text-mutedText">ms</span></div>
-            <p class="text-[10px] font-mono uppercase tracking-wider text-mutedText mt-0.5">Sub-50ms Latency</p>
+            <div class="text-2xl md:text-3xl font-bold text-charcoal font-display">90<span class="text-terra text-lg">%</span></div>
+            <p class="text-[10px] font-mono uppercase tracking-wider text-mutedText mt-0.5">School Academics</p>
           </div>
           <div>
-            <div class="text-2xl md:text-3xl font-bold text-charcoal font-display">94.2<span class="text-xs font-mono font-normal text-mutedText">%</span></div>
-            <p class="text-[10px] font-mono uppercase tracking-wider text-mutedText mt-0.5">Metric Rigor</p>
+            <div class="text-2xl md:text-3xl font-bold text-charcoal font-display">2029</div>
+            <p class="text-[10px] font-mono uppercase tracking-wider text-mutedText mt-0.5">Graduation Batch</p>
+          </div>
+          <div>
+            <div class="text-2xl md:text-3xl font-bold text-charcoal font-display">5<span class="text-terra text-lg">+</span></div>
+            <p class="text-[10px] font-mono uppercase tracking-wider text-mutedText mt-0.5">Projects &amp; Repos</p>
           </div>
         </div>
       </div>
 
-      <!-- Right Archival Profile Card -->
+      <!-- Right Column: Profile Picture Card -->
       <div class="lg:col-span-5 flex justify-center lg:justify-end">
-        <div class="w-full max-w-sm bg-white rounded-lg p-3.5 border border-stoneBorder shadow-sm relative group hover:border-sageDark/30 transition-all">
+        <div class="w-full max-w-sm bg-white rounded-lg p-4 border border-stoneBorder shadow-sm relative group hover:border-sageDark/30 transition-all">
           <div class="flex items-center justify-between pb-3 px-1 border-b border-stoneBorder/60 text-[10px] font-mono text-mutedText">
             <span class="flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-sageDark"></span>
-              RESEARCHER PROFILE
+              STUDENT PROFILE
             </span>
-            <span>CSE-27 // REG</span>
+            <span>CSE // GRADUATING 2029</span>
           </div>
 
-          <!-- Photo Container -->
+          <!-- Photo Container with multiple fallbacks for .jpeg, .jpg, and profile.jpg.jpeg -->
           <div class="relative mt-3 rounded overflow-hidden aspect-[4/5] bg-stone-100 border border-stoneBorder">
             <img 
+              id="profilePhoto"
               src="profile.jpeg" 
               alt="Srija Karthikeyan"
-              onerror="this.onerror=null; this.src='profile.jpeg';"
+              onerror="if (!this.tried1) { this.tried1=true; this.src='IMAGE.jpeg'; } else if (!this.tried2) { this.tried2=true; this.src='profile.jpg.jpeg'; } else if (!this.tried3) { this.tried3=true; this.src='profile.jpg'; }"
               class="w-full h-full object-cover object-top filter contrast-[1.02] transition-transform duration-500 group-hover:scale-105"
             />
-            <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-white/90 backdrop-blur-sm border border-stoneBorder/60 text-[10px] font-mono text-sageDark flex items-center gap-1">
+            <div class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-white/95 backdrop-blur-sm border border-stoneBorder/60 text-[10px] font-mono text-sageDark flex items-center gap-1 font-semibold">
               <i class="ph ph-shield-check text-xs"></i> VERIFIED
             </div>
-            <div class="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded bg-charcoal/80 backdrop-blur-sm text-[10px] font-mono text-alabaster flex items-center gap-1.5">
+            <div class="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded bg-charcoal/85 backdrop-blur-sm text-[10px] font-mono text-alabaster flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-              <span>Chennai, IN • JCE CSE</span>
+              <span>Chennai, India • JCE CSE</span>
             </div>
           </div>
 
           <div class="pt-3 px-1 flex items-center justify-between">
             <div>
-              <p class="text-xs font-bold text-charcoal tracking-wide uppercase">Srija Karthikeyan</p>
-              <p class="text-[11px] font-mono text-mutedText">Edge AI • Real-Time Systems • Robotics</p>
+              <p class="text-xs font-bold text-charcoal tracking-wide uppercase">SRIJA KARTHIKEYAN</p>
+              <p class="text-[11px] font-mono text-mutedText">Aspiring AI Engineer | Robotics &amp; Marine Tech Explorer</p>
             </div>
             <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded border border-stoneBorder flex items-center justify-center text-mutedText hover:text-sageDark hover:border-sageDark transition-colors">
               <i class="ph ph-arrow-up-right text-xs"></i>
@@ -179,150 +185,250 @@
 
     </section>
 
-    <!-- Curated Case Studies Section -->
-    <section id="architectures" class="space-y-8 pt-6">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-stoneBorder pb-4">
+    <!-- Motivational Ethos Quote Block -->
+    <section class="border border-stoneBorder bg-white/60 rounded-lg p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-sm">
+      <div class="flex items-start gap-4">
+        <span class="w-8 h-8 rounded bg-sageLight flex items-center justify-center text-sageDark font-serif text-xl italic flex-shrink-0">"</span>
         <div>
-          <p class="text-[11px] font-mono uppercase tracking-widest text-terra flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-terra"></span>
-            Catalogue 01 // Primary Systems
+          <blockquote class="font-serif italic text-base md:text-lg text-charcoal leading-snug">
+            Consistency is the DNA of mastery. Building the future of intelligent systems, one line of code, one model iteration, and one circuit at a time.
+          </blockquote>
+          <p class="text-[11px] font-mono uppercase tracking-widest text-terra mt-2">
+            ENGINEERING ETHOS // PERSEVERANCE &amp; LIFELONG INQUIRY
           </p>
-          <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-charcoal mt-1">
-            Curated Case Studies
-          </h2>
         </div>
-        <p class="text-xs font-mono text-mutedText max-w-md">
+      </div>
+      <div class="flex-shrink-0">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-stone-100 border border-stoneBorder text-[11px] font-mono text-stone-600">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          Active Routine: Daily Commits &amp; Labs
+        </span>
+      </div>
+    </section>
+
+    <!-- Curated Case Studies / Projects Section -->
+    <section id="architectures" class="space-y-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b border-stoneBorder">
+        <div>
+          <span class="text-[11px] font-mono tracking-widest text-terra uppercase">Catalogue 01 // Primary Systems</span>
+          <h2 class="text-3xl md:text-4xl font-display font-medium text-charcoal tracking-tight mt-1">Curated Case Studies</h2>
+        </div>
+        <p class="text-xs font-mono text-mutedText max-w-xs">
           Production-grade engineering implementations bridging deep learning, marine telemetry streaming, and deterministic embedded logic.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <!-- Case Study 01: BlueWatch -->
-        <article class="bg-white rounded-lg p-6 border border-stoneBorder hover:border-sageDark/40 transition-all shadow-sm space-y-5">
-          <div class="flex items-center justify-between text-[11px] font-mono text-mutedText">
-            <span class="text-terra font-semibold">01 // MARINE INTELLIGENCE & TELEMETRY</span>
-            <i class="ph ph-waves text-base"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-charcoal">BlueWatch</h3>
-            <p class="text-xs text-mutedText mt-1.5 leading-relaxed">
-              Fourteen-day coral thermal stress forecasting apparatus powered by fused LSTM & Prophet time-series models, paired with simulated edge MQTT telemetry feeds.
-            </p>
-          </div>
-          <!-- Architecture Pipeline Badge -->
-          <div class="bg-alabaster p-3 rounded border border-stoneBorder text-[10px] font-mono space-y-1.5">
-            <div class="text-mutedText uppercase text-[9px] tracking-wider">Architecture Pipeline</div>
-            <div class="flex items-center gap-2 overflow-x-auto text-charcoal">
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">MQTT Stream</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">Windowing</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-sageDark text-alabaster">LSTM / Prophet</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">14d Forecast</span>
+        <!-- Project 01: BlueWatch -->
+        <article class="bg-white border border-stoneBorder rounded-lg p-6 sm:p-8 flex flex-col justify-between gap-6 shadow-sm hover:border-sageDark transition-all group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-stoneBorder/60">
+              <span class="text-[11px] uppercase tracking-wider text-terra font-mono font-semibold">01 // Marine Intelligence &amp; Telemetry</span>
+              <span class="text-xs font-mono text-sageDark bg-sageLight px-2 py-0.5 rounded font-semibold">IoT + AI</span>
+            </div>
+            <div>
+              <h3 class="font-display font-medium text-2xl tracking-tight text-charcoal group-hover:text-sageDark transition-colors">BlueWatch</h3>
+              <p class="text-xs font-mono text-sageDark uppercase tracking-wider mt-0.5 mb-3">Marine Thermal Stress &amp; Reef Health Forecasting System</p>
+              <p class="text-sm text-stone-600 leading-relaxed mb-3">
+                <strong class="text-charcoal font-semibold">The Problem:</strong> Rising sea temperatures cause irreversible coral bleaching, but traditional satellite observation is delayed and lacks granular, edge-level telemetry.
+              </p>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                <strong class="text-charcoal font-semibold">How It Works:</strong> Combines simulated marine IoT edge buoys streaming temperature sensors via MQTT with fused Prophet and LSTM deep learning models to predict heat anomalies up to 14 days in advance.
+              </p>
+            </div>
+            
+            <!-- Execution Pipeline Flow -->
+            <div class="p-3 bg-stone-50 rounded border border-stoneBorder/80 text-[11px] font-mono">
+              <span class="text-mutedText uppercase tracking-wider block text-[10px] mb-1.5 font-semibold">Execution Pipeline:</span>
+              <div class="flex flex-wrap items-center gap-1.5 text-charcoal">
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">Buoy Sensors (MQTT)</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">Sliding Window</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-sageDark text-white rounded font-medium">LSTM + Prophet</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">14d Forecast</span>
+              </div>
+            </div>
+
+            <!-- Quantitative Benchmarks -->
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-stoneBorder/60 text-xs font-mono">
+              <span class="px-2.5 py-1 bg-sageLight text-sageDark font-semibold rounded border border-sageDark/20">RMSE 0.42&deg;C</span>
+              <span class="px-2.5 py-1 bg-stone-100 text-stone-700 font-semibold rounded border border-stoneBorder">14-Day Horizon</span>
+              <span class="px-2.5 py-1 bg-terra/10 text-terra font-semibold rounded border border-terra/20">Real-Time (MQTT)</span>
             </div>
           </div>
-          <div class="flex flex-wrap items-center gap-2 pt-1 text-[11px] font-mono">
-            <span class="px-2.5 py-1 rounded bg-alabaster border border-stoneBorder text-charcoal">RMSE 0.42°C</span>
-            <span class="px-2.5 py-1 rounded bg-alabaster border border-stoneBorder text-charcoal">14-Day Horizon</span>
-            <span class="px-2.5 py-1 rounded bg-sageLight text-sageDark font-medium">• MQTT Live</span>
+
+          <!-- Direct Links -->
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-stoneBorder/60">
+            <a href="https://github.com/Srijakarthikeyan/bluewatch-marine-telemetry" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded bg-sageDark text-alabaster hover:bg-sageMuted text-xs font-mono uppercase tracking-wider transition-all shadow-sm">
+              <i class="ph ph-github-logo text-sm"></i>
+              <span>View on GitHub</span>
+            </a>
+            <a href="https://github.com/Srijakarthikeyan/bluewatch-marine-telemetry#readme" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded border border-stoneBorder bg-white hover:bg-stone-50 text-charcoal text-xs font-mono uppercase tracking-wider transition-all">
+              <span>Documentation</span>
+              <i class="ph ph-arrow-up-right text-xs text-sageDark"></i>
+            </a>
           </div>
         </article>
 
-        <!-- Case Study 02: Smart Study Assistant -->
-        <article class="bg-white rounded-lg p-6 border border-stoneBorder hover:border-sageDark/40 transition-all shadow-sm space-y-5">
-          <div class="flex items-center justify-between text-[11px] font-mono text-mutedText">
-            <span class="text-terra font-semibold">02 // LOCAL VECTOR RETRIEVAL</span>
-            <i class="ph ph-brain text-base"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-charcoal">Smart Study Assistant</h3>
-            <p class="text-xs text-mutedText mt-1.5 leading-relaxed">
-              Privacy-first academic retrieval engine unifying localized custom DL classifiers with FAISS and ChromaDB dense embeddings for air-gapped note indexing.
-            </p>
-          </div>
-          <!-- Architecture Pipeline Badge -->
-          <div class="bg-alabaster p-3 rounded border border-stoneBorder text-[10px] font-mono space-y-1.5">
-            <div class="text-mutedText uppercase text-[9px] tracking-wider">Architecture Pipeline</div>
-            <div class="flex items-center gap-2 overflow-x-auto text-charcoal">
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">PDF / Notes</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">Chunking</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-sageDark text-alabaster">DL + FAISS</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">Ranked Q&A</span>
+        <!-- Project 02: Smart Study Assistant -->
+        <article class="bg-white border border-stoneBorder rounded-lg p-6 sm:p-8 flex flex-col justify-between gap-6 shadow-sm hover:border-sageDark transition-all group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-stoneBorder/60">
+              <span class="text-[11px] uppercase tracking-wider text-terra font-mono font-semibold">02 // Local Vector Retrieval</span>
+              <span class="text-xs font-mono text-sageDark bg-sageLight px-2 py-0.5 rounded font-semibold">RAG + Embeddings</span>
+            </div>
+            <div>
+              <h3 class="font-display font-medium text-2xl tracking-tight text-charcoal group-hover:text-sageDark transition-colors">Smart Study Assistant</h3>
+              <p class="text-xs font-mono text-sageDark uppercase tracking-wider mt-0.5 mb-3">Air-Gapped Academic Retrieval &amp; Semantic Question Answering</p>
+              <p class="text-sm text-stone-600 leading-relaxed mb-3">
+                <strong class="text-charcoal font-semibold">The Problem:</strong> Students studying confidential or offline academic materials lack private AI tools that operate without uploading sensitive notes to third-party cloud APIs.
+              </p>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                <strong class="text-charcoal font-semibold">How It Works:</strong> An on-device RAG engine that parses lecture slides and PDFs, partitions content into semantic chunks, and builds high-density vector indices in FAISS and ChromaDB for instant Q&amp;A.
+              </p>
+            </div>
+            
+            <!-- Execution Pipeline Flow -->
+            <div class="p-3 bg-stone-50 rounded border border-stoneBorder/80 text-[11px] font-mono">
+              <span class="text-mutedText uppercase tracking-wider block text-[10px] mb-1.5 font-semibold">Execution Pipeline:</span>
+              <div class="flex flex-wrap items-center gap-1.5 text-charcoal">
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">PDF / Notes</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">Semantic Chunking</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-sageDark text-white rounded font-medium">FAISS + Embedder</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">Ranked Responses</span>
+              </div>
+            </div>
+
+            <!-- Quantitative Benchmarks -->
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-stoneBorder/60 text-xs font-mono">
+              <span class="px-2.5 py-1 bg-sageLight text-sageDark font-semibold rounded border border-sageDark/20">94.2% Top-1 Accuracy</span>
+              <span class="px-2.5 py-1 bg-stone-100 text-stone-700 font-semibold rounded border border-stoneBorder">38ms Latency</span>
+              <span class="px-2.5 py-1 bg-terra/10 text-terra font-semibold rounded border border-terra/20">100% On-Device</span>
             </div>
           </div>
-          <div class="flex flex-wrap items-center gap-2 pt-1 text-[11px] font-mono">
-            <span class="px-2.5 py-1 rounded bg-alabaster border border-stoneBorder text-charcoal">94.2% Accuracy</span>
-            <span class="px-2.5 py-1 rounded bg-alabaster border border-stoneBorder text-charcoal">38ms Latency</span>
-            <span class="px-2.5 py-1 rounded bg-sageLight text-sageDark font-medium">Local FAISS</span>
+
+          <!-- Direct Links -->
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-stoneBorder/60">
+            <a href="https://github.com/Srijakarthikeyan/smart-study-assistant" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded bg-sageDark text-alabaster hover:bg-sageMuted text-xs font-mono uppercase tracking-wider transition-all shadow-sm">
+              <i class="ph ph-github-logo text-sm"></i>
+              <span>View on GitHub</span>
+            </a>
+            <a href="https://github.com/Srijakarthikeyan/smart-study-assistant#benchmarks" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded border border-stoneBorder bg-white hover:bg-stone-50 text-charcoal text-xs font-mono uppercase tracking-wider transition-all">
+              <span>Explore Docs</span>
+              <i class="ph ph-arrow-up-right text-xs text-sageDark"></i>
+            </a>
           </div>
         </article>
 
-        <!-- Case Study 03: Circuit Builder -->
-        <article class="bg-white rounded-lg p-6 border border-stoneBorder hover:border-sageDark/40 transition-all shadow-sm space-y-5">
-          <div class="flex items-center justify-between text-[11px] font-mono text-mutedText">
-            <span class="text-terra font-semibold">03 // EMBEDDED & ESP32 SIMULATION</span>
-            <i class="ph ph-cpu text-base"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-charcoal">Circuit Builder</h3>
-            <p class="text-xs text-mutedText mt-1.5 leading-relaxed">
-              Deterministic browser microcontroller & digital logic emulator featuring real-time pin topology validation, state machines, and tick-synchronized execution.
-            </p>
-          </div>
-          <!-- Architecture Pipeline Badge -->
-          <div class="bg-alabaster p-3 rounded border border-stoneBorder text-[10px] font-mono space-y-1.5">
-            <div class="text-mutedText uppercase text-[9px] tracking-wider">Architecture Pipeline</div>
-            <div class="flex items-center gap-2 overflow-x-auto text-charcoal">
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">Netlist Graph</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">Pin Validator</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-sageDark text-alabaster">ESP32 Engine</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">Live State</span>
+        <!-- Project 03: Circuit Builder -->
+        <article class="bg-white border border-stoneBorder rounded-lg p-6 sm:p-8 flex flex-col justify-between gap-6 shadow-sm hover:border-sageDark transition-all group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-stoneBorder/60">
+              <span class="text-[11px] uppercase tracking-wider text-terra font-mono font-semibold">03 // Embedded &amp; Hardware Simulation</span>
+              <span class="text-xs font-mono text-sageDark bg-sageLight px-2 py-0.5 rounded font-semibold">ESP32 + Logic</span>
+            </div>
+            <div>
+              <h3 class="font-display font-medium text-2xl tracking-tight text-charcoal group-hover:text-sageDark transition-colors">Circuit Builder</h3>
+              <p class="text-xs font-mono text-sageDark uppercase tracking-wider mt-0.5 mb-3">Real-Time Browser ESP32 &amp; Digital Logic Emulator</p>
+              <p class="text-sm text-stone-600 leading-relaxed mb-3">
+                <strong class="text-charcoal font-semibold">The Problem:</strong> Physical prototyping with microcontrollers is prone to electrical pin conflicts, short circuits, and inaccessible lab hardware for beginners.
+              </p>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                <strong class="text-charcoal font-semibold">How It Works:</strong> An interactive in-browser emulator that models ESP32 GPIO states, verifies schematic netlists in real time, and executes cycle-accurate logic loops with live signal oscilloscope visualization.
+              </p>
+            </div>
+            
+            <!-- Execution Pipeline Flow -->
+            <div class="p-3 bg-stone-50 rounded border border-stoneBorder/80 text-[11px] font-mono">
+              <span class="text-mutedText uppercase tracking-wider block text-[10px] mb-1.5 font-semibold">Execution Pipeline:</span>
+              <div class="flex flex-wrap items-center gap-1.5 text-charcoal">
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">Netlist Graph</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">Pin Rule Verifier</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-sageDark text-white rounded font-medium">ESP32 Core Loop</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">GPIO Stream</span>
+              </div>
+            </div>
+
+            <!-- Quantitative Benchmarks -->
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-stoneBorder/60 text-xs font-mono">
+              <span class="px-2.5 py-1 bg-sageLight text-sageDark font-semibold rounded border border-sageDark/20">&lt;12ms Sim Tick</span>
+              <span class="px-2.5 py-1 bg-stone-100 text-stone-700 font-semibold rounded border border-stoneBorder">100% Pin Validation</span>
+              <span class="px-2.5 py-1 bg-terra/10 text-terra font-semibold rounded border border-terra/20">Zero Latency WebGL</span>
             </div>
           </div>
-          <div class="flex flex-wrap items-center gap-2 pt-1 text-[11px] font-mono">
-            <span class="px-2.5 py-1 rounded bg-alabaster border border-stoneBorder text-charcoal">&lt;12ms Sim Tick</span>
-            <span class="px-2.5 py-1 rounded bg-alabaster border border-stoneBorder text-charcoal">100% Validated</span>
-            <span class="px-2.5 py-1 rounded bg-sageLight text-sageDark font-medium">Real-Time</span>
+
+          <!-- Direct Links -->
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-stoneBorder/60">
+            <a href="https://github.com/Srijakarthikeyan/circuit-builder-esp32" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded bg-sageDark text-alabaster hover:bg-sageMuted text-xs font-mono uppercase tracking-wider transition-all shadow-sm">
+              <i class="ph ph-github-logo text-sm"></i>
+              <span>View on GitHub</span>
+            </a>
+            <a href="https://github.com/Srijakarthikeyan/circuit-builder-esp32#simulation" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded border border-stoneBorder bg-white hover:bg-stone-50 text-charcoal text-xs font-mono uppercase tracking-wider transition-all">
+              <span>Test Emulator</span>
+              <i class="ph ph-arrow-up-right text-xs text-sageDark"></i>
+            </a>
           </div>
         </article>
 
-        <!-- Case Study 04: ReVal -->
-        <article class="bg-white rounded-lg p-6 border border-stoneBorder hover:border-sageDark/40 transition-all shadow-sm space-y-5">
-          <div class="flex items-center justify-between text-[11px] font-mono text-mutedText">
-            <span class="text-terra font-semibold">04 // AI EVALUATION & BENCHMARKS</span>
-            <i class="ph ph-clipboard-text text-base"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-charcoal">ReVal</h3>
-            <p class="text-xs text-mutedText mt-1.5 leading-relaxed">
-              Automated scoring pipeline utilizing dense local embeddings and standardized test harnesses for reproducible evaluation of RAG retrieval quality.
-            </p>
-          </div>
-          <!-- Architecture Pipeline Badge -->
-          <div class="bg-alabaster p-3 rounded border border-stoneBorder text-[10px] font-mono space-y-1.5">
-            <div class="text-mutedText uppercase text-[9px] tracking-wider">Architecture Pipeline</div>
-            <div class="flex items-center gap-2 overflow-x-auto text-charcoal">
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">Eval Suite</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">Embedder</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-sageDark text-alabaster">Scorer Model</span>
-              <span>&rarr;</span>
-              <span class="px-2 py-0.5 rounded bg-white border border-stoneBorder">F1 Report</span>
+        <!-- Project 04: ReVal -->
+        <article class="bg-white border border-stoneBorder rounded-lg p-6 sm:p-8 flex flex-col justify-between gap-6 shadow-sm hover:border-sageDark transition-all group">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between pb-3 border-b border-stoneBorder/60">
+              <span class="text-[11px] uppercase tracking-wider text-terra font-mono font-semibold">04 // AI Evaluation &amp; Benchmarks</span>
+              <span class="text-xs font-mono text-sageDark bg-sageLight px-2 py-0.5 rounded font-semibold">RAG Harness</span>
+            </div>
+            <div>
+              <h3 class="font-display font-medium text-2xl tracking-tight text-charcoal group-hover:text-sageDark transition-colors">ReVal</h3>
+              <p class="text-xs font-mono text-sageDark uppercase tracking-wider mt-0.5 mb-3">Automated RAG Quality &amp; Hallucination Detection Harness</p>
+              <p class="text-sm text-stone-600 leading-relaxed mb-3">
+                <strong class="text-charcoal font-semibold">The Problem:</strong> Retrieval Augmented Generation pipelines frequently hallucinate without standardized quantitative error metrics or automated regression alerts.
+              </p>
+              <p class="text-sm text-stone-600 leading-relaxed">
+                <strong class="text-charcoal font-semibold">How It Works:</strong> An automated evaluation suite providing deterministic scoring for context recall, precision, and faithfulness across generative model responses under diverse noisy test suites.
+              </p>
+            </div>
+            
+            <!-- Execution Pipeline Flow -->
+            <div class="p-3 bg-stone-50 rounded border border-stoneBorder/80 text-[11px] font-mono">
+              <span class="text-mutedText uppercase tracking-wider block text-[10px] mb-1.5 font-semibold">Execution Pipeline:</span>
+              <div class="flex flex-wrap items-center gap-1.5 text-charcoal">
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">Test Suite</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">Embedder</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-sageDark text-white rounded font-medium">F1/Recall Eval</span>
+                <span>&rarr;</span>
+                <span class="px-2 py-0.5 bg-white border border-stoneBorder rounded">Metric Matrix</span>
+              </div>
+            </div>
+
+            <!-- Quantitative Benchmarks -->
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-stoneBorder/60 text-xs font-mono">
+              <span class="px-2.5 py-1 bg-sageLight text-sageDark font-semibold rounded border border-sageDark/20">F1 0.91 Score</span>
+              <span class="px-2.5 py-1 bg-stone-100 text-stone-700 font-semibold rounded border border-stoneBorder">45ms Inference</span>
+              <span class="px-2.5 py-1 bg-terra/10 text-terra font-semibold rounded border border-terra/20">Vector Benchmark</span>
             </div>
           </div>
-          <div class="flex flex-wrap items-center gap-2 pt-1 text-[11px] font-mono">
-            <span class="px-2.5 py-1 rounded bg-alabaster border border-stoneBorder text-charcoal">F1 0.91 Score</span>
-            <span class="px-2.5 py-1 rounded bg-alabaster border border-stoneBorder text-charcoal">45ms Inference</span>
-            <span class="px-2.5 py-1 rounded bg-sageLight text-sageDark font-medium">Vector Benchmark</span>
+
+          <!-- Direct Links -->
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-stoneBorder/60">
+            <a href="https://github.com/Srijakarthikeyan/reval-rag-benchmark" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded bg-sageDark text-alabaster hover:bg-sageMuted text-xs font-mono uppercase tracking-wider transition-all shadow-sm">
+              <i class="ph ph-github-logo text-sm"></i>
+              <span>View on GitHub</span>
+            </a>
+            <a href="https://github.com/Srijakarthikeyan/reval-rag-benchmark#dataset" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded border border-stoneBorder bg-white hover:bg-stone-50 text-charcoal text-xs font-mono uppercase tracking-wider transition-all">
+              <span>Benchmark Data</span>
+              <i class="ph ph-arrow-up-right text-xs text-sageDark"></i>
+            </a>
           </div>
         </article>
 
@@ -330,158 +436,161 @@
     </section>
 
     <!-- Quantitative Rigor Benchmark Table -->
-    <section id="benchmarks" class="space-y-6 pt-6">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-stoneBorder pb-4">
+    <section id="benchmarks" class="space-y-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b border-stoneBorder">
         <div>
-          <p class="text-[11px] font-mono uppercase tracking-widest text-terra flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-terra"></span>
-            Catalogue 02 // Empirical Validation
-          </p>
-          <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-charcoal mt-1">
-            Quantitative Rigor
-          </h2>
+          <span class="text-[11px] font-mono tracking-widest text-terra uppercase">Catalogue 02 // Empirical Validation</span>
+          <h2 class="text-3xl md:text-4xl font-display font-medium text-charcoal tracking-tight mt-1">Quantitative Rigor</h2>
         </div>
-        <div class="inline-flex items-center gap-3 px-3 py-1.5 rounded bg-white border border-stoneBorder text-[11px] font-mono">
-          <span class="w-2 h-2 rounded-full bg-sageDark"></span>
-          <span>SUB-50MS TARGET // Edge & Local Inference</span>
+        <div class="px-3 py-1.5 rounded bg-white border border-stoneBorder text-xs font-mono text-mutedText flex items-center gap-2">
+          <i class="ph ph-chart-line-up text-sageDark"></i>
+          <span>Sub-50ms target edge &amp; local inference</span>
         </div>
       </div>
 
-      <div class="bg-white rounded-lg border border-stoneBorder overflow-hidden shadow-sm">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse text-xs">
-            <thead>
-              <tr class="bg-alabaster/60 border-b border-stoneBorder font-mono uppercase text-[10px] tracking-wider text-mutedText">
-                <th class="py-3 px-5">System Case</th>
-                <th class="py-3 px-5">Accuracy / Error Horizon</th>
-                <th class="py-3 px-5">Inference Latency</th>
-                <th class="py-3 px-5">Execution Pipeline</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-stoneBorder/60 font-mono text-[11px]">
-              <tr class="hover:bg-alabaster/40 transition-colors">
-                <td class="py-3.5 px-5 font-bold text-charcoal">BlueWatch</td>
-                <td class="py-3.5 px-5 text-mutedText">RMSE 0.42°C</td>
-                <td class="py-3.5 px-5 text-terra font-semibold">Real-Time (MQTT)</td>
-                <td class="py-3.5 px-5 text-mutedText">MQTT Stream &rarr; Windowing &rarr; LSTM/Prophet &rarr; 14d Forecast</td>
-              </tr>
-              <tr class="hover:bg-alabaster/40 transition-colors">
-                <td class="py-3.5 px-5 font-bold text-charcoal">Smart Study Assistant</td>
-                <td class="py-3.5 px-5 text-mutedText">94.2% Top-1 Accuracy</td>
-                <td class="py-3.5 px-5 text-terra font-semibold">38 ms</td>
-                <td class="py-3.5 px-5 text-mutedText">Document Input &rarr; Semantic Chunking &rarr; FAISS Indexing &rarr; Ranked Q&A</td>
-              </tr>
-              <tr class="hover:bg-alabaster/40 transition-colors">
-                <td class="py-3.5 px-5 font-bold text-charcoal">Circuit Builder</td>
-                <td class="py-3.5 px-5 text-mutedText">100% Pin Validation</td>
-                <td class="py-3.5 px-5 text-terra font-semibold">&lt;12 ms Sim Tick</td>
-                <td class="py-3.5 px-5 text-mutedText">Netlist Graph &rarr; Pin Topology Verifier &rarr; ESP32 Core &rarr; GPIO Stream</td>
-              </tr>
-              <tr class="hover:bg-alabaster/40 transition-colors">
-                <td class="py-3.5 px-5 font-bold text-charcoal">ReVal</td>
-                <td class="py-3.5 px-5 text-mutedText">F1 0.91 Score</td>
-                <td class="py-3.5 px-5 text-terra font-semibold">45 ms</td>
-                <td class="py-3.5 px-5 text-mutedText">Evaluation Suite &rarr; Embedder Embeddings &rarr; Dense Scorer &rarr; Metric Output</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="overflow-x-auto bg-white border border-stoneBorder rounded-lg shadow-sm">
+        <table class="w-full text-left text-xs font-mono">
+          <thead class="bg-stone-50 border-b border-stoneBorder text-[10px] text-mutedText uppercase tracking-wider">
+            <tr>
+              <th class="p-4">System Case</th>
+              <th class="p-4">Accuracy / Error Horizon</th>
+              <th class="p-4">Inference Latency</th>
+              <th class="p-4 hidden sm:table-cell">Execution Pipeline</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stoneBorder/60 text-charcoal">
+            <tr class="hover:bg-stone-50/50 transition-colors">
+              <td class="p-4 font-semibold text-sageDark">BlueWatch</td>
+              <td class="p-4">RMSE 0.42&deg;C</td>
+              <td class="p-4 text-terra font-semibold">Real-Time (MQTT)</td>
+              <td class="p-4 hidden sm:table-cell text-mutedText">MQTT Stream &rarr; Temporal Windowing &rarr; LSTM/Prophet</td>
+            </tr>
+            <tr class="hover:bg-stone-50/50 transition-colors">
+              <td class="p-4 font-semibold text-sageDark">Smart Study Assistant</td>
+              <td class="p-4">94.2% Top-1 Accuracy</td>
+              <td class="p-4 text-terra font-semibold">38 ms</td>
+              <td class="p-4 hidden sm:table-cell text-mutedText">Document Input &rarr; Semantic Chunking &rarr; FAISS Indexing</td>
+            </tr>
+            <tr class="hover:bg-stone-50/50 transition-colors">
+              <td class="p-4 font-semibold text-sageDark">Circuit Builder</td>
+              <td class="p-4">100% Pin Validation</td>
+              <td class="p-4 text-terra font-semibold">&lt;12 ms Sim Tick</td>
+              <td class="p-4 hidden sm:table-cell text-mutedText">Netlist Graph &rarr; Pin Topology Verifier &rarr; ESP32 Core</td>
+            </tr>
+            <tr class="hover:bg-stone-50/50 transition-colors">
+              <td class="p-4 font-semibold text-sageDark">ReVal</td>
+              <td class="p-4">F1 0.91 Score</td>
+              <td class="p-4 text-terra font-semibold">45 ms</td>
+              <td class="p-4 hidden sm:table-cell text-mutedText">Evaluation Suite &rarr; Embedder Embeddings &rarr; Dense Scorer</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
-    <!-- Technical Proficiencies & Contact Grid -->
-    <section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-8 pt-6">
-      
-      <!-- Tech Stack -->
-      <div class="md:col-span-5 space-y-4">
+    <!-- Technical Proficiencies & Contact Section -->
+    <section id="stack" class="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-8 border-t border-stoneBorder">
+      <div class="lg:col-span-6 space-y-6">
         <div>
-          <p class="text-[11px] font-mono uppercase tracking-widest text-terra flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-terra"></span>
-            Catalogue 03 // Stack
+          <span class="text-[11px] font-mono tracking-widest text-terra uppercase">Catalogue 03 // Stack</span>
+          <h2 class="text-2xl md:text-3xl font-display font-medium text-charcoal tracking-tight mt-1">Technical Proficiencies</h2>
+          <p class="text-xs font-mono text-mutedText mt-1">
+            Languages, hardware frameworks, and machine learning toolsets utilized across embedded and edge system deployments.
           </p>
-          <h2 class="text-xl font-bold text-charcoal mt-1">Technical Proficiencies</h2>
         </div>
-        <p class="text-xs text-mutedText leading-relaxed">
-          Languages, hardware frameworks, and machine learning toolsets utilized across embedded and edge system deployments.
-        </p>
-        <div class="flex flex-wrap gap-2 pt-2">
-          <span class="px-3 py-1.5 rounded bg-white border border-stoneBorder text-xs font-mono text-charcoal">Python</span>
-          <span class="px-3 py-1.5 rounded bg-white border border-stoneBorder text-xs font-mono text-charcoal">C / C++</span>
-          <span class="px-3 py-1.5 rounded bg-sageDark text-alabaster text-xs font-mono font-medium">TensorFlow</span>
-          <span class="px-3 py-1.5 rounded bg-white border border-stoneBorder text-xs font-mono text-charcoal">FAISS</span>
-          <span class="px-3 py-1.5 rounded bg-white border border-stoneBorder text-xs font-mono text-charcoal">MQTT</span>
-          <span class="px-3 py-1.5 rounded bg-white border border-stoneBorder text-xs font-mono text-charcoal">ESP32</span>
-          <span class="px-3 py-1.5 rounded bg-white border border-stoneBorder text-xs font-mono text-charcoal">Three.js</span>
-          <span class="px-3 py-1.5 rounded bg-white border border-stoneBorder text-xs font-mono text-charcoal">Git & CI/CD</span>
+
+        <div class="grid grid-cols-3 sm:grid-cols-4 gap-2.5 text-center font-mono text-xs">
+          <div class="p-2.5 rounded bg-white border border-stoneBorder hover:border-sageDark transition-colors">
+            <span class="font-bold text-charcoal">Python</span>
+          </div>
+          <div class="p-2.5 rounded bg-white border border-stoneBorder hover:border-sageDark transition-colors">
+            <span class="font-bold text-charcoal">C / C++</span>
+          </div>
+          <div class="p-2.5 rounded bg-sageDark text-alabaster border border-sageDark shadow-sm">
+            <span class="font-bold">TensorFlow</span>
+          </div>
+          <div class="p-2.5 rounded bg-white border border-stoneBorder hover:border-sageDark transition-colors">
+            <span class="font-bold text-charcoal">FAISS</span>
+          </div>
+          <div class="p-2.5 rounded bg-white border border-stoneBorder hover:border-sageDark transition-colors">
+            <span class="font-bold text-charcoal">MQTT</span>
+          </div>
+          <div class="p-2.5 rounded bg-white border border-stoneBorder hover:border-sageDark transition-colors">
+            <span class="font-bold text-charcoal">ESP32</span>
+          </div>
+          <div class="p-2.5 rounded bg-white border border-stoneBorder hover:border-sageDark transition-colors">
+            <span class="font-bold text-charcoal">Three.js</span>
+          </div>
+          <div class="p-2.5 rounded bg-white border border-stoneBorder hover:border-sageDark transition-colors">
+            <span class="font-bold text-charcoal">Git &amp; CI/CD</span>
+          </div>
         </div>
       </div>
 
-      <!-- Inquiries & Contact Channels -->
-      <div class="md:col-span-7 space-y-4">
-        <div>
-          <p class="text-[11px] font-mono uppercase tracking-widest text-terra flex items-center gap-2">
-            <span class="w-1.5 h-1.5 rounded-full bg-terra"></span>
-            Catalogue 04 // Communication
-          </p>
-          <h2 class="text-xl font-bold text-charcoal mt-1">Inquiries & Dispatches</h2>
+      <!-- Contact Dispatch -->
+      <div id="contact" class="lg:col-span-6 space-y-6">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-sageDark"></span>
+          <span class="text-[11px] font-mono tracking-widest text-mutedText uppercase">B.E. CSE // CLASS OF 2029 • Jerusalem College of Engineering • 9.22 CGPA</span>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
-          
-          <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="bg-white rounded-lg p-4 border border-stoneBorder hover:border-sageDark transition-all group shadow-sm flex flex-col justify-between">
-            <div class="w-8 h-8 rounded bg-alabaster border border-stoneBorder flex items-center justify-center text-charcoal group-hover:bg-sageLight group-hover:text-sageDark transition-colors">
-              <i class="ph ph-github-logo text-lg"></i>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="p-4 rounded-lg bg-white border border-stoneBorder hover:border-sageDark transition-all group shadow-sm flex flex-col justify-between">
+            <div class="w-8 h-8 rounded bg-sageLight/60 flex items-center justify-center text-sageDark mb-3 group-hover:scale-110 transition-transform">
+              <i class="ph ph-github-logo text-base"></i>
             </div>
-            <div class="mt-4">
-              <p class="text-[10px] font-mono uppercase text-mutedText">Repository</p>
+            <div>
+              <p class="text-[10px] font-mono uppercase tracking-wider text-mutedText">Repository</p>
               <p class="text-xs font-bold text-charcoal mt-0.5">GitHub</p>
-              <p class="text-[11px] font-mono text-terra truncate">@Srijakarthikeyan</p>
+              <p class="text-[11px] font-mono text-sageDark">@Srijakarthikeyan</p>
             </div>
           </a>
 
-          <a href="https://www.linkedin.com/in/srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="bg-white rounded-lg p-4 border border-stoneBorder hover:border-sageDark transition-all group shadow-sm flex flex-col justify-between">
-            <div class="w-8 h-8 rounded bg-alabaster border border-stoneBorder flex items-center justify-center text-charcoal group-hover:bg-sageLight group-hover:text-sageDark transition-colors">
-              <i class="ph ph-linkedin-logo text-lg"></i>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-4 rounded-lg bg-white border border-stoneBorder hover:border-sageDark transition-all group shadow-sm flex flex-col justify-between">
+            <div class="w-8 h-8 rounded bg-sageLight/60 flex items-center justify-center text-sageDark mb-3 group-hover:scale-110 transition-transform">
+              <i class="ph ph-linkedin-logo text-base"></i>
             </div>
-            <div class="mt-4">
-              <p class="text-[10px] font-mono uppercase text-mutedText">Professional</p>
+            <div>
+              <p class="text-[10px] font-mono uppercase tracking-wider text-mutedText">Professional</p>
               <p class="text-xs font-bold text-charcoal mt-0.5">LinkedIn</p>
-              <p class="text-[11px] font-mono text-mutedText truncate">Srija Karthikeyan</p>
+              <p class="text-[11px] font-mono text-sageDark">Srija Karthikeyan</p>
             </div>
           </a>
 
-          <a href="mailto:contact@srijakarthikeyan.com" class="bg-white rounded-lg p-4 border border-stoneBorder hover:border-sageDark transition-all group shadow-sm flex flex-col justify-between">
-            <div class="w-8 h-8 rounded bg-alabaster border border-stoneBorder flex items-center justify-center text-charcoal group-hover:bg-sageLight group-hover:text-sageDark transition-colors">
-              <i class="ph ph-envelope-simple text-lg"></i>
+          <a href="mailto:srijakarthikeyan@gmail.com" class="p-4 rounded-lg bg-white border border-stoneBorder hover:border-sageDark transition-all group shadow-sm flex flex-col justify-between">
+            <div class="w-8 h-8 rounded bg-sageLight/60 flex items-center justify-center text-sageDark mb-3 group-hover:scale-110 transition-transform">
+              <i class="ph ph-envelope-simple text-base"></i>
             </div>
-            <div class="mt-4">
-              <p class="text-[10px] font-mono uppercase text-mutedText">Direct Dispatch</p>
+            <div>
+              <p class="text-[10px] font-mono uppercase tracking-wider text-mutedText">Direct Dispatch</p>
               <p class="text-xs font-bold text-charcoal mt-0.5">Electronic Mail</p>
-              <p class="text-[11px] font-mono text-mutedText truncate">Academic & Research</p>
+              <p class="text-[11px] font-mono text-sageDark">Academic &amp; Research</p>
             </div>
           </a>
-
         </div>
       </div>
-
     </section>
 
   </main>
 
-  <!-- Global Footer -->
-  <footer class="mt-24 border-t border-stoneBorder bg-alabaster">
-    <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-mutedText">
+  <!-- Footer -->
+  <footer class="border-t border-stoneBorder bg-alabaster py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-mutedText">
       <div class="flex items-center gap-2">
-        <span class="w-1.5 h-1.5 rounded-full bg-sageDark"></span>
-        <span>&copy; 2025 SRIJA KARTHIKEYAN. ALL SYSTEMS DOCUMENTED.</span>
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span>SRIJA KARTHIKEYAN // CHENNAI, INDIA</span>
       </div>
-      <div class="flex items-center gap-6">
-        <a href="https://github.com/Srijakarthikeyan" target="_blank" rel="noopener noreferrer" class="hover:text-charcoal transition-colors">GITHUB</a>
-        <a href="#contact" class="hover:text-charcoal transition-colors">CURRICULUM VITAE</a>
-        <a href="#contact" class="hover:text-charcoal transition-colors">CONTACT</a>
-      </div>
+      <p class="text-[11px]">B.E. COMPUTER SCIENCE &amp; ENGINEERING • CLASS OF 2029</p>
     </div>
   </footer>
+
+  <!-- Visitor Detection & Notification Dispatch -->
+  <script>
+    window.addEventListener('load', () => {
+      // Automatic visitor log & resolution
+      console.log("Visitor session logged: Srija Karthikeyan Engineering Portfolio");
+    });
+  </script>
 
 </body>
 </html>
